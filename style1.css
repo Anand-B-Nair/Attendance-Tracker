@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(pic1.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+.container{
+    padding: 10px 15px;
+    background-color: #090224;
+}
+nav{
+    margin-top: 0px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 25px;
+}
+nav i{
+    color: #ffffff;
+    padding: 10px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    padding: 10px 25px;
+    font-size: 16px;
+}
+nav ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.header-text{
+    margin-top: 180px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #090224;
+}
+.header-text span{
+    padding: 10px;
+    font-size: 90px;
+    font-family: 'Patua One', cursive;
+}
+.header-text h4{
+    font-size: 25px;
+    font-family: 'Kaushan Script', cursive;
+}
+.header-text i{
+    font-size: 80px;
+}
+.loginbtn{
+    padding: 8px 20px 10px 20px;
+    background-color: white;
+    border: 1px solid #090224;
+    color: #090224;
+    border-radius: 20px;
+}
+.loginbtn:hover{
+   color: #ffffff;
+   background-color: #090224;
+   border: 1px solid #ffffff;
+}.hov{
+    padding: 5px 12px 8px 12px;
+    background-color: #090224;
+    border: 1px solid #090224;
+    color: #ffffff;
+    border-radius: 20px;
+}
+.hov:hover{
+    border: 1px solid #ffffff;
+}
+.fa-beat-fade{
+    padding: 10px;
+    rotate: -30deg;
+    background-color: #ffffff;
+    border-radius: 50px;
+}
