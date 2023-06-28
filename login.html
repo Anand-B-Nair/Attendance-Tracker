@@ -27,4 +27,21 @@
     </div>
     
 </body>
+    <script>
+    const loginBtn = document.querySelector(" button");
+
+    async function checkUser(){
+        if((document.getElementById("name").value=="a")&&(document.getElementById("password").value=="1")){
+            alert("Login successfull!");
+            window.location.href="index.html";
+            
+       }else {
+            alert("Wrong username or password");
+       }
+    }
+    loginBtn.addEventListener("click", ()=>{
+        checkUser();
+    })
+
+</script> 
 </html>
