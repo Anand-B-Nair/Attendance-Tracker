@@ -30,13 +30,13 @@
     <script>
     const loginBtn = document.querySelector(" button");
 
-    async function checkUser(){
-        if((document.getElementById("name").value=="a")&&(document.getElementById("password").value=="1")){
-            alert("Login successfull!");
-            
-       }else {
+   function checkUser() {
+        if((document.getElementById("name").value =="a")&&( document.getElementById("password").value == "1")){
+            alert("Login Successfull!");
+            window.location.href = "attendance.html";
+        }else {
             alert("Wrong username or password");
-       }
+        }
     }
     loginBtn.addEventListener("click", ()=>{
         checkUser();
