@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Lato&family=Patua+One&family=Tajawal&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="login">
@@ -16,32 +17,131 @@
             <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
         <div class="login">
             
-                <form>
+                <form id="loginForm">
                     <i class="fa-solid fa-circle-user fa-fade"></i><br>
-                        <input type="text" id="name" placeholder="Username" required><br>
+                        
+                        <input type="text" id="username" placeholder="Username" required><br>
+                        
                         <input type="password" id="password" placeholder="password" required><br>
-                        <button id="loginBtn" onclick="checkUser()" class="btn">Login</button>
+                        
+                        <button type="submit" class="btn" id="loginBtn">Login</button>
                 </form>
         </div>
         </div>    
     </div>
-    
+    <div id="attendance">
+    <div class="content">
+        <div class="header">
+            <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+        <div class="heading">
+            <h1>ATTENDANCE</h1>
+        </div>
+        <div class="date">
+            <h3>31/07/2023</h3>
+        </div>
+        <div class="table">
+            <div class="table-row table-head">
+                <div class="table-cell">
+                    <p>Roll No</p>
+                </div>
+                <div class="table-cell">
+                    <p>Name</p>
+                </div>
+                <div class="table-cell">
+                    <p>Attendance</p>
+                </div>
+                <div class="table-cell">
+                    <p>%</p>
+                </div>
+            </div>
+            <div class="table-row ">
+                <div class="table-cell last-cell">
+                    <p>17</p>
+                </div>
+                <div class="table-cell Name-cell last-cell">
+                    <p>Gopikrishnan</p>
+                </div>
+                <div class="table-cell last-cell">
+                    <p id="edit1">P</p>
+                </div>
+                <div class="table-cell last-cell">
+                    <p>92</p>
+                </div>
+            </div>
+            <div class="table-row ">
+                <div class="table-cell last-cell">
+                    <p>14</p>
+                </div>
+                <div class="table-cell Name-cell last-cell">
+                    <p>Eldho</p>
+                </div>
+                <div class="table-cell last-cell">
+                    <p id="edit2">A</p>
+                </div>
+                <div class="table-cell last-cell last-cell">
+                    <p>88</p>
+                </div>
+            </div>
+            <div class="table-row ">
+                <div class="table-cell last-cell">
+                    <p>4</p>
+                </div>
+                <div class="table-cell Name-cell last-cell">
+                    <p>Anand</p>
+                </div>
+                <div class="table-cell last-cell">
+                    <p id="edit3">P</p>
+                </div>
+                <div class="table-cell last-cell">
+                    <p>80</p>
+                </div>
+            </div>        
+            <div class="table-row">
+                <div class="table-cell last-cell">
+                    <p>62</p>
+                </div>
+                <div class="table-cell Name-cell last-cell">
+                    <p>Manu</p>
+                </div>
+                <div class="table-cell last-cell">
+                    <p id="edit4">P</p>
+                </div>
+                <div class="table-cell last-cell">
+                    <p>75</p>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
 </body>
-    <script>
-    const loginBtn = document.getElementById("loginBtn");
+<script>
+const loginBtn = document.getElementById("loginBtn");
+loginBtn.addEventListener("click", ()=>{
+    checkUser();
+})
 
-   function checkUser() {
+function checkUser(){
     event.preventDefault();
-        if((document.getElementById("name").value =="a")&&( document.getElementById("password").value == "1")){
-            alert("Login Successfull!");
-            window.location.href = "attendance.html";
-        }else {
-            alert("Wrong username or password");
-        }
+    localStorage.setItem('isLoggedIn','false');
+    if((document.getElementById("username").value=="a")&&(document.getElementById("password").value=="1")){
+        alert("Login Successful!");
+        location.href = "#attendance"; 
+        document.getElementById('edit1').setAttribute('contenteditable', 'true');
+        document.getElementById('edit1').addEventListener('input', function() {
+            document.getElementById('edit1').innerHTML = this.innerHTML; });
+        document.getElementById('edit2').setAttribute('contenteditable', 'true');
+        document.getElementById('edit2').addEventListener('input', function() {
+            document.getElementById('edit2').innerHTML = this.innerHTML; });
+        document.getElementById('edit3').setAttribute('contenteditable', 'true');
+        document.getElementById('edit3').addEventListener('input', function() {
+            document.getElementById('edit3').innerHTML = this.innerHTML; });
+        document.getElementById('edit4').setAttribute('contenteditable', 'true');
+        document.getElementById('edit4').addEventListener('input', function() {
+            document.getElementById('edit4').innerHTML = this.innerHTML; });
+    }else {
+        alert("Wrong username or password. Try again");
     }
-        
-    loginBtn.addEventListener("click", ()=>{
-        checkUser();
-    })
+    }
 </script> 
 </html>
