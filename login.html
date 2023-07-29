@@ -124,7 +124,7 @@ loginBtn.addEventListener("click", ()=>{
 function checkUser(){
     event.preventDefault();
     localStorage.setItem('isLoggedIn','false');
-    if((document.getElementById("username").value=="a")&&(document.getElementById("password").value=="1")){
+    if((document.getElementById("username").value=="admin")&&(document.getElementById("password").value=="123")){
         alert("Login Successful!");
         location.href = "#attendance"; 
         document.getElementById('edit1').setAttribute('contenteditable', 'true');
